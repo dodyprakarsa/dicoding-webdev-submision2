@@ -183,7 +183,7 @@ custom-maindata > .articles img {
      */
 
 /* footer */
-footer {
+custom-footer {
     /* display: inline-block; */
     background-color: #2c3e50;
     padding: 2em;
@@ -191,22 +191,22 @@ footer {
     text-align: center;
 }
 
-footer ul {
+custom-footer > ul {
     margin: 0 auto;
     /* display: inline-block; */
 }
 
-footer li {
+custom-footer > ul > li {
     /* display: inline-block; */
     margin: 0 1em;
     font-size: 14px;
 }
 
-footer a {
+custom-footer ul > li > a {
     /* display: inline-block; */
     padding: 1.3em;
     text-decoration: none;
-    color: #fff
+    color: red;
 }
 
 footer p {

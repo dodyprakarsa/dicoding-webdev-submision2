@@ -6,7 +6,7 @@ const Favorite = {
     return `
       <section class="content">
           <div class="latest">
-              <h1 tabindex="0" class="latest"></h1>
+              <h1 tabindex="0" class="latest-all"></h1>
               <div id="restoList" class="posts"></div>
           </div>
       </section>
@@ -14,7 +14,7 @@ const Favorite = {
   },
 
   async afterRender () {
-    const title = document.querySelector('.latest')
+    const title = document.querySelector('.latest-all')
     const restaurantsContainer = document.querySelector('#restoList')
     title.innerHTML = `<p>Loading</p>`
 

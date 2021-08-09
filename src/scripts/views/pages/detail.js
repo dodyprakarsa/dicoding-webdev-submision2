@@ -6,12 +6,10 @@ import FavButtonInitiator from '../../utility/fav-button-initiator'
 const Detail = {
   async render () {
     return `
-    <section class="content">
-          <div class="latest">
-              <h1 tabindex="0" class="latest-single"></h1>
-              <div id="restoSingle" class="posts-single"></div>
+          <div class="content">
+              <h1 tabindex="0" class="content__heading"></h1>
+              <div id="restoSingle" class="posts"></div>
           </div>
-      </section>
     `
   },
 
@@ -19,7 +17,7 @@ const Detail = {
     
     const url = UrlParser.parseActiveUrlWithoutCombiner()
     const singleContainer = document.querySelector('#restoSingle')
-    const restoName = document.querySelector('.latest-single')
+    const restoName = document.querySelector('.content__heading')
     restoName.innerHTML = `<p>Loading</p>`
 
     try {

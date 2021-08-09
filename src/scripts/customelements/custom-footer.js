@@ -6,7 +6,7 @@ class CustomFooter extends HTMLElement {
   
   
     render() {
-        this.innerHTML = ` <footer>
+        this.innerHTML = `<footer>
         <ul>
             <li><a tabindex="0" href="#/home">Home</a></li>
             <li><a tabindex="0" href="#/favorite">Favorite</a></li>

@@ -4,8 +4,8 @@ import { createRestaurantItemTemplate } from '../templates/template-creator';
 const Home = {
   async render () {
     return `<section class="content">
-        <div class="latest">
-            <h1 tabindex="0" class="latest-all"></h1>
+        <div class="content">
+            <h1 tabindex="0" class="content__heading"></h1>
             <div id="restoList" class="posts"></div>
         </div>
      </section>
@@ -14,7 +14,7 @@ const Home = {
 
   async afterRender() {
     
-    const title = document.querySelector('.latest-all')
+    const title = document.querySelector('.content__heading')
     const restaurantsContainer = document.querySelector('#restoList')
     title.innerHTML = `<p>Loading</p>`
 

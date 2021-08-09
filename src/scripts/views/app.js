@@ -1,5 +1,5 @@
 import DrawerInitiator from '../utility/drawer_initiator';
-import FavButtonInitiator from '../utility/fav-button-initiator';
+// import FavButtonInitiator from '../utility/fav-button-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
  

@@ -1,22 +1,22 @@
 import CONFIG from '../../globals/api-endpoint';
 
 const createRestaurantDetailTemplate = (restaurant) => {
-  let restaurantCategories = ''
-  let restaurantFoods = ''
-  let restaurantDrinks = ''
-  let restaurantReviews = ''
+  let restaurantCategories = '';
+  let restaurantFoods = '';
+  let restaurantDrinks = '';
+  let restaurantReviews = '';
 
   restaurant.categories.forEach((category) => {
-    restaurantCategories += category.name
-  })
+    restaurantCategories += category.name;
+  });
 
   restaurant.menus.foods.forEach((food) => {
-    restaurantFoods += food.name
-  })
+    restaurantFoods += food.name;
+  });
 
   restaurant.menus.drinks.forEach((drink) => {
-    restaurantDrinks += drink.name
-  })
+    restaurantDrinks += drink.name;
+  });
 
   restaurant.customerReviews.forEach((review) => {
     restaurantReviews += `
@@ -27,8 +27,8 @@ const createRestaurantDetailTemplate = (restaurant) => {
           <p tabindex="0">${review.review}</p>
         </div>
       </div>
-    </div>`
-  })
+    </div>`;
+  });
 
   return `
   <div class="header-img">
@@ -82,8 +82,8 @@ const createRestaurantDetailTemplate = (restaurant) => {
           ${restaurantReviews}
       </div>
   </div>
-  `
-}
+  `;
+};
 
 const createRestaurantItemTemplate = (restaurant) => `
     <article class="post-item" tabindex="0">
@@ -105,18 +105,21 @@ const createRestaurantItemTemplate = (restaurant) => `
             <p tabindex="0" class="post-item-description">${restaurant.description.substr(0, 200)}..</p>
         </div>
     </article>
-  `
+  `;
 
 const createLikeButton = () => `
   <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
-`
+`;
 
 const createLikedButton = () => `
   <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
-`
+`;
 
-export { createRestaurantItemTemplate, createRestaurantDetailTemplate, createLikeButton, createLikedButton };
+export {
+  createRestaurantItemTemplate,
+  createRestaurantDetailTemplate, createLikeButton, createLikedButton,
+};

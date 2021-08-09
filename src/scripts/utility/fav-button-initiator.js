@@ -1,48 +1,48 @@
-import FavRestaurantIdb from '../data/favrestaurant-idb'
-import { createLikeButton, createLikedButton } from '../views/templates/template-creator'
+/* eslint-disable eol-last */
+import FavRestaurantIdb from '../data/favrestaurant-idb';
+import { createLikeButton, createLikedButton } from '../views/templates/template-creator';
 
 const FavButtonInitiator = {
-  async init ({ likeButtonContainer, restaurant }) {
-    this._likeButtonContainer = likeButtonContainer
-    this._restaurant = restaurant
-
-    await this._renderButton()
+  async init({ likeButtonContainer, restaurant }) {
+    this._likeButtonContainer = likeButtonContainer;
+    this._restaurant = restaurant;
+    await this._renderButton();
   },
 
-  async _renderButton () {
-    const { id } = this._restaurant
+  async _renderButton() {
+    const { id } = this._restaurant;
 
     if (await this._isRestaurantExist(id)) {
-      this._renderLiked()
+      this._renderLiked();
     } else {
-      this._renderLike()
+      this._renderLike();
     }
   },
 
-  async _isRestaurantExist (id) {
-    const restaurant = await FavRestaurantIdb.getRestaurant(id)
-    return !!restaurant
+  async _isRestaurantExist(id) {
+    const restaurant = await FavRestaurantIdb.getRestaurant(id);
+    return !!restaurant;
   },
 
-  _renderLike () {
-    this._likeButtonContainer.innerHTML = createLikeButton()
+  _renderLike() {
+    this._likeButtonContainer.innerHTML = createLikeButton();
 
-    const likeButton = document.querySelector('#likeButton')
+    const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavRestaurantIdb.putRestaurant(this._restaurant)
-      this._renderButton()
-    })
+      await FavRestaurantIdb.putRestaurant(this._restaurant);
+      this._renderButton();
+    });
   },
 
-  _renderLiked () {
-    this._likeButtonContainer.innerHTML = createLikedButton()
+  _renderLiked() {
+    this._likeButtonContainer.innerHTML = createLikedButton();
 
-    const likeButton = document.querySelector('#likeButton')
+    const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavRestaurantIdb.deleteRestaurant(this._restaurant.id)
-      this._renderButton()
-    })
-  }
-}
+      await FavRestaurantIdb.deleteRestaurant(this._restaurant.id);
+      this._renderButton();
+    });
+  },
+};
 
 export default FavButtonInitiator;

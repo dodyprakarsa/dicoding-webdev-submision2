@@ -6,7 +6,7 @@ const Home = {
     return `
         <div class="content">
             <h1 tabindex="0" class="content__heading"></h1>
-            <div id="restoList" class="movies"></div>
+            <div id="restoList" class="restoran-home"></div>
         </div>
     `;
   },

@@ -8,7 +8,7 @@ const Detail = {
     return `
           <div class="content">
               <h1 tabindex="0" class="content__heading"></h1>
-              <div id="restoSingle" class="movie"></div>
+              <div id="restoSingle" class="restoran-detail"></div>
               <div id="likeButtons"></div>
 
           </div>

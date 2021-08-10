@@ -27,16 +27,16 @@
         display: inline-block;
       }
 
-      .movies {
+      .restoran-home {
         grid-template-columns: 1fr;
 
     }
 
-    .movie {
+    .restoran-detail {
         grid-template-columns: 1fr;
     }
 
-    .movie .movie__title {
+    .restoran-detail {
         grid-column-start: 1;
         grid-column-end: 3;
     }
@@ -44,7 +44,7 @@
 }
 
 @media screen and (min-width: 550px) {
-  .movies {
+  .restoran-home {
       grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -52,20 +52,20 @@
 
 
 @media screen and (min-width: 900px) {
-  .movies {
+  .restoran-home {
       grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (min-width: 1200px) {
 
-  .movies {
+  .restoran-home {
       grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media screen and (min-width: 1600px) {
-  .movies {
+  .restoran-home {
       grid-template-columns: repeat(5, 1fr);
   }
 }

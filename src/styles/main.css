@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 /* body, html {
@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
     /* font-size: 12px; */
     /* color: #424242; */
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
 /* button to main contents */
@@ -172,37 +172,29 @@ main {
 }
 
 
-/*
-  Movies
-*/
-
-.movies {
+.restoran-home {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
     margin: 32px 0;
 }
 
-/*
-  Movie Item
-*/
-
-.movie-item {
+.restoran-item-detail {
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
 }
 
-.movie-item__header {
+.restoran-item-header {
     position: relative;
 }
 
-.movie-item .movie-item__header .movie-item__header__poster {
+.restoran-item-detail .restoran-item-header .restoran-detail-picture {
     width: 100%;
 }
 
-.movie-item .movie-item__header .movie-item__header__rating {
+.restoran-item-detail .restoran-item-header .restoran-rating {
     position: absolute;
     padding: 8px;
     bottom: 20px;
@@ -212,36 +204,11 @@ main {
     color: white;
 }
 
-.movie-item .movie-item__header .movie-item__header__rating .movie-item__header__rating__score {
+.restoran-item-detail .restoran-item-header .restoran-rating .restoran-rating-score {
     margin-left: 10px;
 }
 
-.movie-item .movie-item__content {
-    padding: 16px;
-}
-
-.movie-item .movie-item__content h3 {
-    margin: 0 0 10px 0;
-}
-
-.movie-item .movie-item__content h3 a {
-    color: #db0000;
-    text-decoration: none;
-}
-
-.movie-item .movie-item__content p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4; /* number of lines to show */
-    -webkit-box-orient: vertical;
-}
-
-/*
-  Movie
-*/
-
-.movie {
+.restoran-detail {
     margin: 0 auto;
     width: 100%;
     max-width: 800px;
@@ -250,29 +217,29 @@ main {
     gap: 18px 16px;
 }
 
-.movie .movie__poster {
+.restoran-detail .movie__poster {
     width: 100%;
     max-width: 400px;
 }
 
-.movie__info {
+.restoran-info {
     margin: 10px 10px;
     padding-top: 10px;
     
 }
 
-.movie__info a{
+.restoran-info a{
     color: #bf1722;
 }
-.movie__info p{
+.restoran-info p{
     text-align: justify;
     padding-bottom: 10px;
 }
-.movie__info h2{
+.restoran-info h2{
     padding-bottom: 10px;
 }
 
-.movie__overview p{
+.restaurant-overview p{
     color: #bf1722;
     padding-bottom: 10px;
     font-style: italic;

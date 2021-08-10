@@ -218,11 +218,6 @@ main {
     gap: 18px 16px;
 }
 
-.restoran-detail .restoran-details-picture {
-    width: 100%;
-    max-width: 400px;
-}
-
 .restoran-info {
     margin: 10px 10px;
     padding-top: 10px;
@@ -231,13 +226,12 @@ main {
 }
 
 .restoran-info a {
-    display: block;
     min-width: 44px;
     min-height: 44px;
     color: #bf1722;
 }
 .restoran-info p {
-    text-align: justify;
+    /* text-align: justify; */
     padding-bottom: 10px;
 }
 .restoran-info h2 {
@@ -260,14 +254,20 @@ custom-footer {
     text-align: center;
 }
 
+custom-footer ul {
+    display: inline-block;
+    margin-top: 10px;
+    /* font-size: 14px; */
+}
+
 custom-footer li {
     display: inline-block;
     margin: 0 1em;
-    font-size: 14px;
+    /* font-size: 14px; */
 }
 
 custom-footer a {
-    display:block;
+    display:inline-block;
     color: blue;
     min-width: 44px;
     min-height: 44px;

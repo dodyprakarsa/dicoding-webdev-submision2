@@ -3,12 +3,11 @@ import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
-    return `<section class="content">
+    return `
         <div class="content">
             <h1 tabindex="0" class="content__heading"></h1>
-            <div id="restoList" class="posts"></div>
+            <div id="restoList" class="movies"></div>
         </div>
-     </section>
     `;
   },
 

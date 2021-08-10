@@ -4,7 +4,8 @@ class CustomFooter extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = `<footer>
+    this.innerHTML = `
+    <footer>
         <ul>
             <li><a tabindex="0" href="#/home">Home</a></li>
             <li><a tabindex="0" href="#/favorite">Favorite</a></li>
@@ -12,8 +13,7 @@ class CustomFooter extends HTMLElement {
         </ul>
         <p>Copyright © 2021 - Hunger Game </p>
     </footer>`;
-    // eslint-disable-next-line no-extra-semi
-  };
+  }
 }
 
 customElements.define('custom-footer', CustomFooter);

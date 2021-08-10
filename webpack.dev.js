@@ -5,8 +5,8 @@ const common = require('./webpack.common');
 module.exports = merge(common, {
   mode: 'development',
   devServer: {
-    
-    contentBase: path.resolve(__dirname, 'dist')
+
+    contentBase: path.resolve(__dirname, 'dist'),
 
     /* [
       path.resolve(__dirname, 'dist'),
@@ -14,5 +14,5 @@ module.exports = merge(common, {
       path.join(__dirname, 'src/public')
     ],
     contentBasePublicPath: '/api', */
-  }
+  },
 });

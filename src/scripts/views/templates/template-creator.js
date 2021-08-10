@@ -1,4 +1,4 @@
-import CONFIG from '../../globals/api-endpoint';
+import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (restaurant) => {
   let restaurantCategories = '';
@@ -20,92 +20,49 @@ const createRestaurantDetailTemplate = (restaurant) => {
 
   restaurant.customerReviews.forEach((review) => {
     restaurantReviews += `
-    <div class="post-item">
-      <div tabindex="0" class="post-item-content">
-        <div>
-          <h3 tabindex="0"> ${review.name} <span tabindex="0"> ${review.date} </span></h3>
-          <p tabindex="0">${review.review}</p>
-        </div>
-      </div>
-    </div>`;
+    <div tabindex="0" class="movie__overview">
+        <h4 tabindex="0"> ${review.name}, <span tabindex="0"> ${review.date}</span></h4>
+        <p tabindex="0">${review.review}</p>
+      </div>`;
   });
 
   return `
-  <div class="header-img">
-      <img tabindex="0" src="${CONFIG.IMG_MED + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous">
-      <div class="favorite"></div>
-      <div class="post-item-title-rating-single">
-          <p class="post-item-rating">
-            <span> ${restaurant.rating} </span>
-          </p>
+  <div class="movie-item">
+      <div class="movie-item__header">
+      <br>
+        <img tabindex="0" class="movie-item__header__poster" src="${CONFIG.IMG_MED + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous">
+        <div class="movie-item__header__rating">
+        <p tabindex="0">Restaurants : ${restaurantCategories} </p>
+        <p>Ratings :<span class="movie-item__header__rating__score">⭐️${restaurant.rating} </span></p>
       </div>
-  </div>
-  <div class="posts-single-content">
-    <article tabindex="0" class="post-item">
-        <div class="post-item-content">
-            <p class="post-item-description">
-                <span tabindex="0"> ${restaurantCategories} </span>
-                <br>
-                <span tabindex="0"> ${restaurant.address}, ${restaurant.city} </span>
-                <br>
-                <b tabindex="0">Description : </b>
-                <br>
-                <span tabindex="0"> ${restaurant.description} </span>
-            </p>
-        </div>
-    </article>
-    <div class="posts-menu">
-        <article class="post-item">
-            <div class="post-item-content">
-                <div class="post-item-content-title">
-                    <h2 tabindex="0">Foods</h2>
-                </div>
-                <p tabindex="0" class="post-item-description">
-                    ${restaurantFoods}
-                </p>
-            </div>
-        </article>
-        <article class="post-item">
-            <div class="post-item-content">
-                <div class="post-item-content-title">
-                    <h2 tabindex="0">Drinks</h2>
-                </div>
-                <p tabindex="0" class="post-item-description">
-                    ${restaurantDrinks}
-                </p>
-            </div>
-        </article>
     </div>
-  </div>
-  <div class="posts-review">
-      <div class="post-user-review">
-          ${restaurantReviews}
+      <div class="movie__info">    
+        <p tabindex="0"><b>Address : </b>${restaurant.address}, ${restaurant.city} </p>
+        <p tabindex="0"><b>Foods : </b>${restaurantFoods}</p>
+        <p tabindex="0"><b>Drinks : </b>${restaurantDrinks}</p>
+        <p tabindex="0"><b>Description : </b>${restaurant.description} </p>
       </div>
   </div>
-  `;
+    <btabindex="0">Top Comments : </b>
+        <div class="movie__overview">
+          <p>${restaurantReviews}</p>
+        </div>`;
 };
 
 const createRestaurantItemTemplate = (restaurant) => `
-    <article class="post-item" tabindex="0">
-        <div class="post-img-card">
-            <img tabindex="0" class="post-item-thumbnail" src="${CONFIG.IMG_SMALL + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous">
-            <div class="post-location">
-                <h2>${restaurant.city}</h2>
-            </div>
-        </div>
-        <div class="post-item-content">
-            <div class="post-item-title-rating">
-                <h3 class="post-item-title">
-                  <a href="${`/#/detail/${restaurant.id}`}"> ${restaurant.name} </a>
-                </h3>
-                <p class="post-item-rating">
-                  <span> ${restaurant.rating} </span>
-                </p>
-            </div>
-            <p tabindex="0" class="post-item-description">${restaurant.description.substr(0, 200)}..</p>
-        </div>
-    </article>
-  `;
+  <div class="movie-item">
+    <div class="movie-item__header">
+      <img tabindex="0" class="movie-item__header__poster" src="${CONFIG.IMG_SMALL + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous">
+      <div class="movie-item__header__rating">
+        <p>⭐️<span class="movie-item__header__rating__score">${restaurant.rating}</span></p>
+      </div>
+    </div>
+    <div class="movie__info">
+      <h2><a href="${`/#/detail/${restaurant.id}`}"> ${restaurant.name} </a></h2>
+      <h3>${restaurant.city}</h3>
+      <p tabindex="0" class="post-item-description"><b>Description : </b>${restaurant.description.substr(0, 200)}..</p>
+    </div>
+  </div>`;
 
 const createLikeButton = () => `
   <button aria-label="like this restaurant" id="likeButton" class="like">

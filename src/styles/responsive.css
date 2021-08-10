@@ -1,77 +1,65 @@
 /* 500px */
-@media screen and (max-width: 400px) {
-  .header {
-    z-index: 2;
-    position: absolute;
-    background-color: black;
-    width: 150px;
-    left: 0;
-    -webkit-transform: translate(-200px, 0);
-    transform: translate(-200px, 0);
-    transition: transform 0.4s ease;
+@media screen and (max-width: 450px) {
+      .header {
+        z-index: 2;
+        position: absolute;
+        background-color: black;
+        width: 150px;
+        left: 0;
+        -webkit-transform: translate(-200px, 0);
+        transform: translate(-200px, 0);
+        transition: transform 0.4s ease;
+    }
+
+      .open {
+          -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+      }
+
+      custom-header > .header > a {
+          display: list-item;
+          border-bottom: 1px solid #E0E0E0;
+          width: 100%;
+          text-align: left;
+      }
+
+      custom-header > span {
+        display: inline-block;
+      }
+
+      .movies {
+        grid-template-columns: 1fr;
+
+    }
+
+    .movie {
+        grid-template-columns: 1fr;
+    }
+
+    .movie .movie__title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
 }
 
-.open {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-}
-
-custom-header > .header > a {
-    display: list-item;
-    border-bottom: 1px solid #E0E0E0;
-    width: 100%;
-    text-align: left;
-}
-
-custom-header > span {
-  display: inline-block;
-}
+@media screen and (min-width: 700px) {
+  .movies {
+      grid-template-columns: repeat(3, 1fr);
   }
-
-  /* 600px */
-/* @media screen and (min-width: 550px) {
-    custom-datanested {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    custom-maindata > .articles > h1, h2, p {
-      font-size: 20px;
-     }
-
-} */
-
-/* 800px */
-@media screen and (min-width:  800px) {
-    custom-datanested {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    custom-maindata > .articles > h1, h2, p {
-      font-size: 20px;
-     }
-
 }
 
 @media screen and (min-width: 1200px) {
-    main {
-        max-width: 1200px;
-    }
+  main {
+    max-width: 1200px;
+}
+  .movies {
+      grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-
-/* old style */
-/* custom-header > .header > a {
-  float: none;
-  display: block;
-  text-align: left;
+@media screen and (min-width: 1600px) {
+  .movies {
+      grid-template-columns: repeat(5, 1fr);
+  }
 }
-
-custom-header > .header {
-  float: none;
-}
-
-custom-header > figure {
-  margin: unset;
-} */

@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-  }, 
+  },
   module: {
     rules: [
       {
@@ -25,25 +25,25 @@ module.exports = {
           },
         ],
       },
-      
+
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
         use: [
           {
-            loader: 'file-loader'
+            loader: 'file-loader',
             /* options: {
               name: '[name].[ext]',
               outputPath: 'dist/public',
               publicPath: '/dist/public'
             } */
-          }
+          },
         ],
       },
     ],
   },
-  
+
   plugins: [
-    
+
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/templates/index.html'),
       filename: 'index.html',
@@ -72,9 +72,9 @@ module.exports = {
       entry: path.resolve(__dirname, 'src/scripts/sw.js'),
     }),
 
-   /*  new InjectManifest({
+    /*  new InjectManifest({
       swSrc: path.resolve(__dirname, 'src/scripts/sw.js')
     }), */
-    new CleanWebpackPlugin()
-  ]
-}
+    new CleanWebpackPlugin(),
+  ],
+};

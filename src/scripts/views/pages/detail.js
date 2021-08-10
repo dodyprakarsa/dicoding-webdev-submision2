@@ -8,7 +8,9 @@ const Detail = {
     return `
           <div class="content">
               <h1 tabindex="0" class="content__heading"></h1>
-              <div id="restoSingle" class="posts"></div>
+              <div id="restoSingle" class="movie"></div>
+              <div id="likeButtons"></div>
+
           </div>
     `;
   },
@@ -29,7 +31,7 @@ const Detail = {
       }
 
       await FavButtonInitiator.init({
-        likeButtonContainer: document.querySelector('.favorite'),
+        likeButtonContainer: document.querySelector('#likeButtons'),
         restaurant,
       });
     } catch (error) {

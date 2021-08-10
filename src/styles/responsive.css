@@ -23,9 +23,11 @@
           text-align: left;
       }
 
-      custom-header > span {
+      custom-header > button {
         display: inline-block;
       }
+
+      
 
       .restoran-home {
         grid-template-columns: 1fr;

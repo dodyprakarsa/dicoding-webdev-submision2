@@ -6,7 +6,7 @@ class JumboTron extends HTMLElement {
   render() {
     this.innerHTML = `
         <div class="jumbotron">
-        <img tabindex="0" src="./public/Superfoods.png" alt="perkedel goreng">
+        <img tabindex="0" src="./public/hero-image_4.jpg" alt="perkedel goreng">
             <p tabindex="0">THE BEST RESTAURANTS IN THE CITY</p>
         </div>`;
   }

@@ -109,13 +109,14 @@ custom-header > .header {
     color: black;
 }
 
-custom-header > span {
+custom-header button {
     min-width: 44px;
     min-height: 44px;
-    color: rgb(255, 251, 251);
-    font-size:30px;
-    padding: 5px;
-    /* cursor:pointer; */
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    padding: 8px;
+    cursor: pointer;
     display:none;
 }
 
@@ -229,6 +230,8 @@ main {
 }
 
 .restoran-info a{
+    min-width: 44px;
+    min-height: 44px;
     color: #bf1722;
 }
 .restoran-info p{
@@ -265,10 +268,8 @@ custom-footer li {
     font-size: 14px;
 }
 
-/* custom-footer > a > p {
-    display: inline-block;
-    padding: 1.3em;
-    text-decoration: none;
-    color: #fff
-} */
+custom-footer a {
+    min-width: 44px;
+    min-height: 44px;
+}
 

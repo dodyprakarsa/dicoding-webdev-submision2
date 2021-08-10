@@ -9,7 +9,7 @@ class CustomHeader extends HTMLElement {
           <img src="./public/eat_log.jpg" alt="logo">
           <figcaption>Hunger Game</figcaption>
         </figure>
-        <span id="hamburger">&#9776;</span>   
+        <button id="hamburger">&#9776;</button>   
         <div id="drawer" class="header">
           <a tabindex="0" href="#/home">Home</a>
           <a tabindex="0" href="#/favorite">Favorite</a>

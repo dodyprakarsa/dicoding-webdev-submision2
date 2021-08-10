@@ -33,7 +33,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
         <img tabindex="0" class="restoran-detail-picture" src="${CONFIG.IMG_MED + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous">
         <div class="restoran-rating">
         <p tabindex="0">Categories : ${restaurantCategories} </p>
-        <p>Ratings :<span class="restoran-rating-score">⭐️${restaurant.rating} </span></p>
+        <p tabindex="0">Ratings :<span class="restoran-rating-score">⭐️${restaurant.rating} </span></p>
       </div>
     </div>
       <div class="restoran-info">    
@@ -52,7 +52,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restoran-item-detail">
     <div class="restoran-item-header">
-      <img tabindex="0" class="restoran-detail-picture" src="${CONFIG.IMG_SMALL + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous">
+      <img tabindex="0" class="restoran-details-picture" src="${CONFIG.IMG_SMALL + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous">
       <div class="restoran-rating">
       <p>${restaurant.city}</p>
         <p>⭐️<span class="restoran-rating-score">${restaurant.rating}</span></p>

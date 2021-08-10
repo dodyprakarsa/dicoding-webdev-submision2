@@ -32,7 +32,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
       <br>
         <img tabindex="0" class="movie-item__header__poster" src="${CONFIG.IMG_MED + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous">
         <div class="movie-item__header__rating">
-        <p tabindex="0">Restaurants : ${restaurantCategories} </p>
+        <p tabindex="0">Categories : ${restaurantCategories} </p>
         <p>Ratings :<span class="movie-item__header__rating__score">⭐️${restaurant.rating} </span></p>
       </div>
     </div>
@@ -54,12 +54,12 @@ const createRestaurantItemTemplate = (restaurant) => `
     <div class="movie-item__header">
       <img tabindex="0" class="movie-item__header__poster" src="${CONFIG.IMG_SMALL + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous">
       <div class="movie-item__header__rating">
+      <p>${restaurant.city}</p>
         <p>⭐️<span class="movie-item__header__rating__score">${restaurant.rating}</span></p>
       </div>
     </div>
     <div class="movie__info">
       <h2><a href="${`/#/detail/${restaurant.id}`}"> ${restaurant.name} </a></h2>
-      <h3>${restaurant.city}</h3>
       <p tabindex="0" class="post-item-description"><b>Description : </b>${restaurant.description.substr(0, 200)}..</p>
     </div>
   </div>`;

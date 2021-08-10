@@ -1,5 +1,5 @@
 /* 500px */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
       .header {
         z-index: 2;
         position: absolute;
@@ -43,16 +43,22 @@
 
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 550px) {
+  .movies {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+@media screen and (min-width: 900px) {
   .movies {
       grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  main {
-    max-width: 1200px;
-}
+
   .movies {
       grid-template-columns: repeat(4, 1fr);
   }

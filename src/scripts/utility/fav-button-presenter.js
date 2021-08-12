@@ -1,8 +1,8 @@
 /* eslint-disable eol-last */
 import FavRestaurantIdb from '../data/favrestaurant-idb';
-import { createLikeButton, createLikedButton } from '../views/templates/template-creator';
+import { createLikeButton, createUnlikeButton } from '../views/templates/template-creator';
 
-const FavButtonInitiator = {
+const FavButtonPresenter = {
   async init({ likeButtonContainer, restaurant }) {
     this._likeButtonContainer = likeButtonContainer;
     this._restaurant = restaurant;
@@ -11,7 +11,6 @@ const FavButtonInitiator = {
 
   async _renderButton() {
     const { id } = this._restaurant;
-
     if (await this._isRestaurantExist(id)) {
       this._renderLiked();
     } else {
@@ -35,7 +34,7 @@ const FavButtonInitiator = {
   },
 
   _renderLiked() {
-    this._likeButtonContainer.innerHTML = createLikedButton();
+    this._likeButtonContainer.innerHTML = createUnlikeButton();
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
@@ -45,4 +44,4 @@ const FavButtonInitiator = {
   },
 };
 
-export default FavButtonInitiator;
+export default FavButtonPresenter;

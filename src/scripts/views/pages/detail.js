@@ -1,7 +1,7 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantDB from '../../data/restaurant-db';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';
-import FavButtonInitiator from '../../utility/fav-button-initiator';
+import FavButtonPresenter from '../../utility/fav-button-presenter';
 
 const Detail = {
   async render() {
@@ -30,7 +30,7 @@ const Detail = {
         restoName.innerHTML = '<p>Not Found</p>';
       }
 
-      await FavButtonInitiator.init({
+      await FavButtonPresenter.init({
         likeButtonContainer: document.querySelector('#likeButtons'),
         restaurant,
       });

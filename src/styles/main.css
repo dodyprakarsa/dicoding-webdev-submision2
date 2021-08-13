@@ -128,7 +128,12 @@ custom-jumbotron {
     width: 100%;
 }
 
-custom-jumbotron > .jumbotron{
+custom-jumbotron > .jumbotron {
+    margin: 0 auto;
+    width: 100%;
+}
+
+custom-jumbotron > .jumbotron > picture {
     margin: 0 auto;
     width: 100%;
 }
